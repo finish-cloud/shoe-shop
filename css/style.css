@@ -1,0 +1,339 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.site-title {
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+
+.sec-title {
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+}
+
+#navi {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  color: #fff;
+  padding: 60px 25px;
+  background-color: #121212;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+#navi a {
+  color: #fff;
+}
+#navi ul {
+  margin: 0;
+  padding: 0;
+}
+#navi ul.nav-menu {
+  margin-bottom: 60px;
+  border-top: solid 1px #fff;
+}
+#navi ul.nav-menu li {
+  position: relative;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: solid 1px #fff;
+}
+#navi ul.nav-sns li {
+  padding: 5px 0;
+}
+
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+.open .hamburger span {
+  background-color: #fff;
+}
+.open .hamburger span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+          transform: translateY(10px) rotate(-315deg);
+}
+.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.open .hamburger span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+          transform: translateY(-10px) rotate(315deg);
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.hamburger span:nth-child(1) {
+  top: 4px;
+}
+.hamburger span:nth-child(2) {
+  top: 14px;
+}
+.hamburger span:nth-child(3) {
+  bottom: 4px;
+}
+
+/*-------------------------------------------
+Main
+-------------------------------------------*/
+#main {
+  padding-top: 80px;
+}
+
+/*-------------------------------------------
+Video
+-------------------------------------------*/
+#bg-video {
+  width: 100%;
+}
+
+/*-------------------------------------------
+Pickup
+-------------------------------------------*/
+#pickup {
+  width: 100%;
+  padding: 100px 0 50px 0;
+}
+
+#pickup .slick-area {
+  font-size: 0;
+}
+
+#pickup .slick-area li {
+  padding: 0 30px;
+}
+
+/*-------------------------------------------
+Feature
+-------------------------------------------*/
+#feature {
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto -10px auto;
+}
+#feature .grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#feature .grid .item-content {
+  padding: 30px;
+}
+#feature .grid img {
+  vertical-align: top;
+}
+#feature .grid .item-content {
+  padding: 30px;
+}
+#feature .grid .item-cat {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+#feature .grid .item-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#feature .grid .item-date {
+  font-size: 0.75em;
+  text-align: right;
+}
+
+/*-------------------------------------------
+  Contact
+-------------------------------------------*/
+#contact {
+  color: #fff;
+  background-color: #121212;
+  padding: 50px 0;
+}
+#contact .sec-title {
+  color: #fff;
+}
+#contact .content {
+  max-width: 1240px;
+  padding: 0 16px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#contact .contact-info {
+  width: 45%;
+}
+#contact .contact-info p {
+  margin-bottom: 30px;
+}
+#contact .contact-form {
+  width: 45%;
+}
+#contact .contact-form input, #contact .contact-form textarea {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#contact .contact-form .button input {
+  width: 200px;
+  color: #fff;
+  background-color: #121212;
+  border: solid 1px #fff;
+  padding: 12px 0;
+  margin-bottom: 0;
+}
+#contact .contact-form .button input:hover {
+  color: #202020;
+  background-color: #fff;
+}
+
+/*-------------------------------------------
+  footer
+-------------------------------------------*/
+#footer {
+  color: #fff;
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  #header {
+    padding: 20px 16px;
+  }
+
+  .hamburger {
+    right: 20%;
+  }
+
+  #bg-video {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  #puckup {
+    padding: 80px 0;
+  }
+  #puckup .slick-area li {
+    padding: 0 20px;
+  }
+
+  #feature {
+    padding: 80px 16px;
+  }
+  #feature .grid .item-content {
+    padding: 16px;
+  }
+
+  #contact {
+    padding: 80px 0;
+  }
+  #contact .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .content .contact-info, #contact .content .contact-form {
+    width: 100%;
+  }
+  #contact .content .contact-info input, #contact .content .contact-form input {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
